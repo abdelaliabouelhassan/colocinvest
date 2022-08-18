@@ -3,7 +3,7 @@
     class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden"
     style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
   >
-    <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-32">
+    <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-44">
       <div class="w-full grid lg:grid-cols-2 grid-cols-1">
         <div
           class="
@@ -258,8 +258,8 @@
           </button>
         </div>
         <div class="w-full h-full relative">
-          <div class="w-full lg:absolute lg:-top-[130px] lg:-right-14">
-            <DesktopHero class="lg:block hidden" />
+          <div class="w-full lg:absolute lg:-top-[200px] lg:-right-14" @mouseover="show = false" @mouseleave="show = true">
+            <DesktopHero :show="show" class="lg:block hidden" />
             <MobileHero class="lg:hidden" />
           </div>
         </div>
@@ -285,5 +285,10 @@ export default {
     IconRewards,
     IconHouse,
   },
+  data(){
+    return {
+      show:true,
+    }
+  }
 };
 </script>
