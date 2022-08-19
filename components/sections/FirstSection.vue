@@ -3,7 +3,7 @@
     class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden"
     style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
   >
-    <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-44">
+    <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 lg:pb-44 pb-10">
       <div class="w-full grid lg:grid-cols-2 grid-cols-1">
         <div
           class="
@@ -16,7 +16,7 @@
             lg:order-first
           "
         >
-          <div class="w-full flex flex-col items-start space-y-4">
+          <div class="lg:w-full flex flex-col items-start space-y-4 m-auto ">
             <h1 class="text-primary-100  text-[28px] lg:text-6xl font-bold font-Vollkorn">
               Get a <span class="text-trans">€1000</span> cash reward by
               spotting a house!
@@ -243,11 +243,11 @@
 
           <button
             class="
-              text-lg
-              font-bold
+              lg:text-lg text-sm
+              lg:font-bold font-medium
               text-primary-100
-              w-[196px]
-              h-[60px]
+              lg:w-[196px] w-[128px]
+              lg:h-[60px] h-[44px]
               rounded-md
               bg-[#FECE1F]
               text-center
@@ -258,9 +258,9 @@
           </button>
         </div>
         <div class="w-full h-full relative">
-          <div class="w-full lg:absolute lg:-top-[200px] lg:-right-14" @mouseover="show = false" @mouseleave="show = true">
+          <div class="w-full lg:absolute lg:-top-[200px] lg:-right-14 flex" @mouseover="show = false" @mouseleave="show = true">
             <DesktopHero :show="show" class="lg:block hidden" />
-            <MobileHero class="lg:hidden" />
+            <MobileHero class="lg:hidden m-auto" />
           </div>
         </div>
       </div>

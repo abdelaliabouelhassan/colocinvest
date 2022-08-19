@@ -360,7 +360,7 @@
                 relative
               "
             >
-              <!-- <img src="~/assets/img/1.png" class=" w-full h-full" alt=""> -->
+              <img src="~/assets/img/before.png" class=" w-full h-full" alt="Before">
               <div
                 class="
                   bg-white
@@ -414,7 +414,7 @@
                 relative
               "
             >
-              <!-- <img src="~/assets/img/1.png" class=" w-full h-full" alt=""> -->
+              <img :src="require('~/assets/img/'+selected+'.png')" class=" w-full h-full" :alt="selectedBadgeTitle">
               <div
                 class="
                   bg-white
