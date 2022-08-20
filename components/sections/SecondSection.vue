@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ backgroundImage: `url(${bgImage})` }" class="w-full">
+  <section :style="{ backgroundImage: `url(${bgImage})` }" class="w-full">
     <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-32">
           <div class=" flex-col items-center space-y-2 flex  lg:hidden">
             <h1 class="text-primary-100 font-bold font-Vollkorn text-[28px]">
@@ -436,7 +436,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

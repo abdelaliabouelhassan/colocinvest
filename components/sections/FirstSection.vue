@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden"
     style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
   >
@@ -16,8 +16,14 @@
             lg:order-first
           "
         >
-          <div class="lg:w-full flex flex-col items-start space-y-4 m-auto ">
-            <h1 class="text-primary-100  text-[28px] lg:text-6xl font-bold font-Vollkorn">
+          <div class="lg:w-full flex flex-col items-start space-y-4 m-auto">
+            <h1
+              class="
+                text-primary-100 text-[28px]
+                lg:text-6xl
+                font-bold font-Vollkorn
+              "
+            >
               Get a <span class="text-trans">€1000</span> cash reward by
               spotting a house!
             </h1>
@@ -31,14 +37,15 @@
               w-full
               rounded-full
               border border-primary-200
-              p-5
+              py-5
+              px-4
               bg-[#FFFAE9]
               hidden
-              lg:block
+              xl:block
             "
           >
-            <div class="w-full flex items-center space-x-2">
-              <div class="w-full flex items-center space-x-2">
+            <div class="w-full flex items-center justify-between">
+              <div class="flex items-center space-x-2">
                 <IconHouse />
                 <h1
                   class="
@@ -53,7 +60,7 @@
                 </h1>
                 <IconArowRight />
               </div>
-              <div class="w-full flex items-center space-x-2">
+              <div class="flex items-center space-x-2">
                 <IconDeal />
 
                 <h1
@@ -69,7 +76,7 @@
                 </h1>
                 <IconArowRight />
               </div>
-              <div class="w-full flex items-center space-x-2">
+              <div class="flex items-center space-x-2">
                 <IconRewards />
 
                 <h1
@@ -83,7 +90,6 @@
                 >
                   3. You get rewarded
                 </h1>
-                <IconArowRight />
               </div>
             </div>
           </div>
@@ -95,7 +101,8 @@
               space-y-4
               max-w-[250px]
               m-auto
-              lg:hidden
+              md:m-0
+              xl:hidden
             "
           >
             <div
@@ -162,7 +169,7 @@
                 <IconDeal />
                 <h1
                   class="
-                   text-sm
+                    text-sm
                     font-bold
                     text-primary-100
                     font-Vollkorn
@@ -229,7 +236,8 @@
               flex flex-col
               items-start
               space-y-2
-              text-[#414141] text-sm lg:text-lg
+              text-[#414141] text-sm
+              lg:text-lg
               font-normal
               p-4
             "
@@ -243,11 +251,15 @@
 
           <button
             class="
-              lg:text-lg text-sm
-              lg:font-bold font-medium
+              lg:text-lg
+              text-sm
+              lg:font-bold
+              font-medium
               text-primary-100
-              lg:w-[196px] w-[128px]
-              lg:h-[60px] h-[44px]
+              lg:w-[196px]
+              w-[128px]
+              lg:h-[60px]
+              h-[44px]
               rounded-md
               bg-[#FECE1F]
               text-center
@@ -258,14 +270,18 @@
           </button>
         </div>
         <div class="w-full h-full relative">
-          <div class="w-full lg:absolute lg:-top-[200px] lg:-right-14 flex" @mouseover="show = false" @mouseleave="show = true">
-            <DesktopHero :show="show" class="lg:block hidden" />
+          <div
+            class="w-full lg:absolute lg:-top-[200px] lg:-right-8 flex"
+            @mouseover="show = false"
+            @mouseleave="show = true"
+          >
+            <DesktopHero :show="show" class="lg:block hidden xl:absolute" />
             <MobileHero class="lg:hidden m-auto" />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 
@@ -285,10 +301,10 @@ export default {
     IconRewards,
     IconHouse,
   },
-  data(){
+  data() {
     return {
-      show:true,
-    }
-  }
+      show: true,
+    };
+  },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="w-full"
     style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
   >
@@ -217,7 +217,7 @@
       </div>
     </div>
 
-    <div class="w-full flex px-4 py-20 lg:hidden">
+    <div class="w-full flex px-4 py-20 2xl:hidden">
       <div class="m-auto flex flex-col items-center space-y-10">
         <div class="flex flex-col items-center">
           <h1
@@ -535,5 +535,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>

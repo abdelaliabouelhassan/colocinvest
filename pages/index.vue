@@ -3,6 +3,7 @@
     <FirstSection />
     <SecondSection />
     <ThirdSection />
+    <FourthSection />
 
     <div
      v-if="showScrollTop"
@@ -44,12 +45,14 @@
 import FirstSection from "@/components/sections/FirstSection.vue";
 import SecondSection from "@/components/sections/SecondSection.vue";
 import ThirdSection from "@/components/sections/ThirdSection.vue";
+import FourthSection from "@/components/sections/FourthSection.vue";
 export default {
   layout: "default",
   components: {
     FirstSection,
     SecondSection,
-    ThirdSection
+    ThirdSection,
+    FourthSection
   },
   data(){
     return {
