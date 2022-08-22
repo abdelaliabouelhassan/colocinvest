@@ -1,5 +1,5 @@
 <template>
-  <section :style="{ backgroundImage: `url(${bgImage})` }" class="w-full">
+  <section :style="{ backgroundImage: `url(${bgImage})` }" class="w-full" id="WhatImages">
     <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-32">
           <div class=" flex-col items-center space-y-2 flex  lg:hidden">
             <h1 class="text-primary-100 font-bold font-Vollkorn text-[28px]">
@@ -37,10 +37,7 @@
                   'bg-[#FECE1F] ': selected == 1,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 1,
                 }"
-                @click="
-                  selected = 1;
-                  selectedBadgeTitle = 'One doorbell';
-                "
+                @click="handelSelect(1,'One doorbell')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -70,10 +67,7 @@
                   'bg-[#FECE1F] ': selected == 2,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 2,
                 }"
-                @click="
-                  selected = 2;
-                  selectedBadgeTitle = 'Wide facade';
-                "
+                 @click="handelSelect(2,'Wide facade')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -103,10 +97,7 @@
                   'bg-[#FECE1F] ': selected == 3,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 3,
                 }"
-                @click="
-                  selected = 3;
-                  selectedBadgeTitle = 'Great location';
-                "
+                 @click="handelSelect(3,'Great location')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -136,10 +127,7 @@
                   'bg-[#FECE1F] ': selected == 4,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 4,
                 }"
-                @click="
-                  selected = 4;
-                  selectedBadgeTitle = 'Three stories high';
-                "
+                 @click="handelSelect(4,'Three stories high')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -168,7 +156,7 @@
                   'bg-[#FECE1F] ': selected == 5,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 5,
                 }"
-                @click="selected = 5;selectedBadgeTitle = 'After'"
+                 @click="handelSelect(5,'After')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -195,10 +183,7 @@
                   cursor-pointer
                   bg-[#FFFAE9]
                 "
-                @click="
-                  selected = 6;
-                  selectedBadgeTitle = '300 square feet';
-                "
+                 @click="handelSelect(6,'300 square feet')"
               >
                 <span class="lg:text-lg text-base text-primary-100 font-medium"
                   >More detailed characteristics</span
@@ -241,10 +226,7 @@
                       'bg-[#FECE1F] ': selected == 6,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 6,
                     }"
-                    @click="
-                      selected = 6;
-                      selectedBadgeTitle = '300 square feet';
-                    "
+                    @click="handelSelect(6,'300 square feet')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -268,10 +250,7 @@
                       'bg-[#FECE1F] ': selected == 7,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 7,
                     }"
-                    @click="
-                      selected = 7;
-                      selectedBadgeTitle = 'At least 5-6 rooms';
-                    "
+                    @click="handelSelect(7,'At least 5-6 rooms')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -295,10 +274,8 @@
                       'bg-[#FECE1F] ': selected == 8,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 8,
                     }"
-                    @click="
-                      selected = 8;
-                      selectedBadgeTitle = '15 - 20 square meters / room';
-                    "
+                    @click="handelSelect(8,'15 - 20 square meters / room')"
+                    
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -322,10 +299,7 @@
                       'bg-[#FECE1F] ': selected == 9,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 9,
                     }"
-                    @click="
-                      selected = 9;
-                      selectedBadgeTitle = 'Garden and/or a terrace';
-                    "
+                    @click="handelSelect(9,'Garden and/or a terrace')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -449,6 +423,19 @@ export default {
       selected: 1,
       selectedBadgeTitle: "One doorbell",
     };
+  },
+  methods:{
+    goUp(){
+      window.scrollTo({
+        top: document.getElementById("WhatImages").offsetTop,
+        behavior: "smooth",
+      });
+    },
+    handelSelect(index,text){
+      this.selected = index;
+      this.selectedBadgeTitle = text;
+      this.goUp();
+    }
   },
   components: {
     IconCheck,

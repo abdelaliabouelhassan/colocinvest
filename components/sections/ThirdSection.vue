@@ -38,7 +38,9 @@
           "
         ></div>
         <div class="flex flex-col items-center space-y-4 z-40">
-          <span class="font-extrabold text-[50px]">🔍</span>
+          <span class="font-extrabold text-[50px]">
+            <img src="~/assets/svgs/🔍.svg" alt="" />
+          </span>
           <div
             class="
               w-[24px]
@@ -46,7 +48,9 @@
               border-[3px] border-primary-100
               rounded-full
             "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
+            style="
+              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+            "
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             Spot & register
@@ -67,13 +71,17 @@
               -top-[61px]
               z-40
             "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
+            style="
+              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+            "
           >
             We prescreen your registered property
           </div>
         </div>
         <div class="flex flex-col items-center space-y-4 z-40">
-          <span class="font-extrabold text-[50px]">☕</span>
+          <span class="font-extrabold text-[50px]">
+            <img src="~/assets/svgs/☕.svg" alt=""
+          /></span>
           <div
             class="
               w-[24px]
@@ -81,7 +89,9 @@
               border-[3px] border-primary-100
               rounded-full
             "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
+            style="
+              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+            "
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             Let’s have a coffee
@@ -102,13 +112,17 @@
               -top-[61px]
               z-40
             "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
+            style="
+              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+            "
           >
             Complete registration & dashboard
           </div>
         </div>
         <div class="flex flex-col items-center space-y-4 z-40">
-          <span class="font-extrabold text-[50px]">🤝</span>
+          <span class="font-extrabold text-[50px]"
+            ><img src="~/assets/svgs/🤝.svg" alt=""
+          /></span>
           <div
             class="
               w-[24px]
@@ -116,7 +130,9 @@
               border-[3px] border-primary-100
               rounded-full
             "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%); "
+            style="
+              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+            "
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             We seal the deal
@@ -195,6 +211,7 @@
 
       <div class="w-full flex pt-10">
         <button
+         @click="GetStarted"
           class="
             lg:text-lg
             text-sm
@@ -236,7 +253,17 @@
           >
         </div>
         <div class="flex flex-col items-center space-y-20 relative z-40">
-        <div class=" border-2 border-primary-100 lg:border-[3px] lg:h-[832px] h-[780px] lg:top-[214px] top-[192px] absolute z-10 "></div>
+          <div
+            class="
+              border-2 border-primary-100
+              lg:border-[3px] lg:h-[832px]
+              h-[780px]
+              lg:top-[214px]
+              top-[192px]
+              absolute
+              z-10
+            "
+          ></div>
           <div class="flex flex-col items-center space-y-10 z-40">
             <div
               class="
@@ -250,7 +277,9 @@
                 rounded-full
               "
             >
-              <span class="font-extrabold lg:text-[50px] text-2xl">🔍</span>
+              <span class="font-extrabold lg:text-[50px] text-2xl"
+                ><img src="~/assets/svgs/m🔍.svg" alt=""
+              /></span>
               <h3
                 class="
                   lg:text-[25px]
@@ -269,29 +298,34 @@
                 lg:h-[24px]
                 h-[18px]
                 border-[3px] border-primary-100
-                rounded-full z-40
+                rounded-full
+                z-40
               "
-              style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
+              style="
+                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+              "
             ></div>
           </div>
-         <div class=" z-40">
-             <div
-            class="
-              whitespace-nowrap
-              font-medium
-              lg:text-sm
-              text-xs text-primary-100
-              border border-primary-100
-              py-2
-              px-3
-              rounded-md
-              z-40
-            "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
-          >
-            We prescreen your registered property
+          <div class="z-40">
+            <div
+              class="
+                whitespace-nowrap
+                font-medium
+                lg:text-sm
+                text-xs text-primary-100
+                border border-primary-100
+                py-2
+                px-3
+                rounded-md
+                z-40
+              "
+              style="
+                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+              "
+            >
+              We prescreen your registered property
+            </div>
           </div>
-         </div>
           <div class="flex flex-col items-center space-y-10 z-40">
             <div
               class="
@@ -305,7 +339,9 @@
                 rounded-full
               "
             >
-              <span class="font-extrabold lg:text-[50px] text-2xl">☕</span>
+              <span class="font-extrabold lg:text-[50px] text-2xl"
+                ><img src="~/assets/svgs/m☕.svg" alt=""
+              /></span>
               <h3
                 class="
                   lg:text-[25px]
@@ -317,38 +353,43 @@
                 Let’s have a coffee
               </h3>
             </div>
-           <div class=" z-40">
- <div
+            <div class="z-40">
+              <div
+                class="
+                  lg:w-[24px]
+                  w-[18px]
+                  lg:h-[24px]
+                  h-[18px]
+                  border-[3px] border-primary-100
+                  rounded-full
+                  z-40
+                "
+                style="
+                  background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="z-40">
+            <div
               class="
-                lg:w-[24px]
-                w-[18px]
-                lg:h-[24px]
-                h-[18px]
-                border-[3px] border-primary-100
-                rounded-full z-40
+                whitespace-nowrap
+                font-medium
+                lg:text-sm
+                text-xs text-primary-100
+                border border-primary-100
+                py-2
+                px-3
+                rounded-md
+                z-40
               "
-              style=" background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
-            ></div>
-           </div>
+              style="
+                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+              "
+            >
+              Complete registration & dashboard
+            </div>
           </div>
-         <div class=" z-40">
-             <div
-            class="
-              whitespace-nowrap
-              font-medium
-              lg:text-sm
-              text-xs text-primary-100
-              border border-primary-100
-              py-2
-              px-3
-              rounded-md
-              z-40
-            "
-            style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
-          >
-            Complete registration & dashboard
-          </div>
-         </div>
           <div class="flex flex-col items-center space-y-10 z-40">
             <div
               class="
@@ -362,7 +403,9 @@
                 rounded-full
               "
             >
-              <span class="font-extrabold lg:text-[50px] text-2xl">🤝</span>
+              <span class="font-extrabold lg:text-[50px] text-2xl"
+                ><img src="~/assets/svgs/m🤝.svg" alt=""
+              /></span>
               <h3
                 class="
                   lg:text-[25px]
@@ -374,18 +417,20 @@
                 We seal the deal
               </h3>
             </div>
-            <div class=" z-40">
-<div
-              class="
-                lg:w-[24px]
-                w-[18px]
-                lg:h-[24px]
-                h-[18px]
-                border-[3px] border-primary-100
-                rounded-full
-              "
-              style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);"
-            ></div>
+            <div class="z-40">
+              <div
+                class="
+                  lg:w-[24px]
+                  w-[18px]
+                  lg:h-[24px]
+                  h-[18px]
+                  border-[3px] border-primary-100
+                  rounded-full
+                "
+                style="
+                  background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
+                "
+              ></div>
             </div>
           </div>
 
@@ -410,7 +455,8 @@
                 bg-[#FFFAE9]
                 lg:py-5
                 py-3
-                lg:px-6 px-4
+                lg:px-6
+                px-4
                 rounded-full
               "
             >
@@ -537,3 +583,18 @@
     </div>
   </section>
 </template>
+
+
+<script>
+export default {
+  methods: {
+    GetStarted() {
+      //scroll to ContactUs id
+      window.scrollTo({
+        top: document.getElementById("ContactUs").offsetTop,
+        behavior: "smooth",
+      });
+    },
+  },
+};
+</script>

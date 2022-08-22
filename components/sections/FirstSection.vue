@@ -238,7 +238,7 @@
               space-y-2
               text-[#414141] text-sm
               lg:text-lg
-              font-normal
+              font-normal pl-9 lg:pl-0
               p-4
             "
           >
@@ -250,6 +250,7 @@
           </div>
 
           <button
+           @click="GetStarted"
             class="
               lg:text-lg
               text-sm
@@ -305,6 +306,15 @@ export default {
     return {
       show: true,
     };
+  },
+  methods: {
+    GetStarted() {
+      //scroll to ContactUs id
+      window.scrollTo({
+        top: document.getElementById("ContactUs").offsetTop,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>

@@ -434,6 +434,7 @@
 
       <div class="w-full flex lg:pt-10 pt-36">
         <button
+         @click="GetStarted"
           class="
             lg:text-lg
             text-sm
@@ -469,6 +470,13 @@ export default {
     };
   },
   methods: {
+    GetStarted() {
+      //scroll to ContactUs id
+      window.scrollTo({
+        top: document.getElementById("ContactUs").offsetTop,
+        behavior: "smooth",
+      });
+    },
     lastUpdate() {
       let date = new Date();
       let day = date.getDate();

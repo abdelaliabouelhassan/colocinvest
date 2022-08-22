@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full" :style="{ backgroundImage: `url(${bgImage})` }">
+  <section class="w-full" :style="{ backgroundImage: `url(${bgImage})` }" id="ContactUs">
     <div class="w-full max-w-[1520px] m-auto px-4 py-10 space-y-20">
       <div
         class="
