@@ -1,7 +1,6 @@
 <template>
   <section
-    class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden"
-    style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
+    class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden main-bg"
   >
     <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 lg:pb-44 pb-10">
       <div class="w-full grid lg:grid-cols-2 grid-cols-1">

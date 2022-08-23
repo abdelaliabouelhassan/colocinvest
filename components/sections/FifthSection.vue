@@ -1,7 +1,6 @@
 <template>
   <section
-    class="w-full"
-    style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
+    class="w-full main-bg"
   >
     <div class="w-full max-w-[1520px] m-auto px-4 py-20 space-y-20">
      <div class=" w-full flex flex-col lg:items-start items-center space-y-4 lg:space-y-0 ">
