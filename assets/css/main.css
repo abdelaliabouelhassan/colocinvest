@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 
+.main-bg {
+  background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)
+}
+
 .text-trans {
     background: linear-gradient(91.75deg, #F18F34 23.46%, #FCCE23 39.86%);
     -webkit-background-clip: text;

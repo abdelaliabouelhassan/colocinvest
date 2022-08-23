@@ -1,7 +1,6 @@
 <template>
   <section
-    class="w-full"
-    style="background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%)"
+    class="w-full main-bg"
   >
     <div
       class="
@@ -46,11 +45,9 @@
               w-[24px]
               h-[24px]
               border-[3px] border-primary-100
-              rounded-full
+              rounded-full main-bg
             "
-            style="
-              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-            "
+            
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             Spot & register
@@ -69,11 +66,9 @@
               rounded-md
               absolute
               -top-[61px]
-              z-40
+              z-40 main-bg
             "
-            style="
-              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-            "
+           
           >
             We prescreen your registered property
           </div>
@@ -87,11 +82,9 @@
               w-[24px]
               h-[24px]
               border-[3px] border-primary-100
-              rounded-full
+              rounded-full main-bg
             "
-            style="
-              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-            "
+           
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             Let’s have a coffee
@@ -110,11 +103,9 @@
               rounded-md
               absolute
               -top-[61px]
-              z-40
+              z-40 main-bg
             "
-            style="
-              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-            "
+          
           >
             Complete registration & dashboard
           </div>
@@ -128,11 +119,9 @@
               w-[24px]
               h-[24px]
               border-[3px] border-primary-100
-              rounded-full
+              rounded-full main-bg
             "
-            style="
-              background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-            "
+           
           ></div>
           <h3 class="text-[25px] text-primary-100 font-bold">
             We seal the deal
@@ -299,11 +288,9 @@
                 h-[18px]
                 border-[3px] border-primary-100
                 rounded-full
-                z-40
+                z-40 main-bg
               "
-              style="
-                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-              "
+              
             ></div>
           </div>
           <div class="z-40">
@@ -317,11 +304,9 @@
                 py-2
                 px-3
                 rounded-md
-                z-40
+                z-40 main-bg
               "
-              style="
-                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-              "
+              
             >
               We prescreen your registered property
             </div>
@@ -362,11 +347,9 @@
                   h-[18px]
                   border-[3px] border-primary-100
                   rounded-full
-                  z-40
+                  z-40 main-bg
                 "
-                style="
-                  background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-                "
+                
               ></div>
             </div>
           </div>
@@ -381,11 +364,9 @@
                 py-2
                 px-3
                 rounded-md
-                z-40
+                z-40 main-bg
               "
-              style="
-                background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-              "
+            
             >
               Complete registration & dashboard
             </div>
@@ -425,11 +406,9 @@
                   lg:h-[24px]
                   h-[18px]
                   border-[3px] border-primary-100
-                  rounded-full
+                  rounded-full main-bg
                 "
-                style="
-                  background: linear-gradient(270deg, #ffffff 0%, #fffbec 100%);
-                "
+            
               ></div>
             </div>
           </div>
