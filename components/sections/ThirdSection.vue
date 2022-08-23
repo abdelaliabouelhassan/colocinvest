@@ -538,6 +538,7 @@
           </div>
 
           <button
+           @click="GetStarted"
             class="
               lg:text-lg
               text-sm
