@@ -48,7 +48,7 @@
               >
               <input
                 id="lastname"
-                placeholder="First name"
+                placeholder="Last name"
                 type="text"
                 class="
                   placeholder-[#7A7A7A]
@@ -163,11 +163,11 @@
             </div>
             <div class="flex flex-col items-start space-y-2">
               <label for="Region" class="lg:text-lg text-sm text-black font-medium"
-                >neighbourhood/area</label
+                >Neighbourhood/area</label
               >
               <input
                 id="Region"
-                placeholder="House neighbourhood/area"
+                placeholder="House Neighbourhood/area"
                 type="text"
                 class="
                   placeholder-[#7A7A7A]
