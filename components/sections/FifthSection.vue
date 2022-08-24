@@ -80,7 +80,7 @@
                 "
               >
                 <img
-                  :src="items[active].image"
+                  src="~/assets/img/user.png"
                   class="w-full h-full object-cover"
                   :alt="items[active].name"
                 />
@@ -109,7 +109,7 @@
             "
             :class="{'bg-[#FECE1F]':active == 0}"
           ></div>
-          <div
+          <!-- <div
 
            @click="active = 1"
             class="
@@ -144,7 +144,7 @@
               hover:bg-[#FECE1F]
             "
             :class="{'bg-[#FECE1F]':active == 3}"
-          ></div>
+          ></div> -->
         </div>
       </div>
     </div>
@@ -162,30 +162,10 @@ export default {
           name: "Zoë Buyle",
           text: "My name is Zoë Buyle, I am a student psychology in Ghent and like any student can use some extra ‘pocket money’. I saw the add from Coloc by accident and knew that my uncle who lived in the city centre of Ghent was planning on selling his house. I got him in touch with Coloc by registering his house and just three weeks later I received €1.000 through the dashboard.",
           image:
-            "https://images.unsplash.com/photo-1627161683077-e34782c24d81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWdlbnR8ZW58MHx8MHx8&w=1000&q=80",
+            "~/assets/img/user.png",
           career:"Student"
         },
-        {
-          name: "rico fhos ",
-          text: "lorme ipsum dolor sit amet, consectetur adipiscing elit.",
-          image:
-            "https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?w=2000",
-        career:"software engineer"
-        },
-        {
-          name: "jhin doe",
-          text: "lorme ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          image:
-            "https://img.freepik.com/free-photo/suspicious-bearded-man-looks-doubtfully-curves-lips-being-indecisive-makes-grimace_273609-8966.jpg?w=2000",
-            career:"doctor"
-      },
-        {
-          name: "tacos suse",
-          text: "g elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          image:
-            "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600",
-          career:"freelancer"
-       },
+       
       ],
     };
   },

@@ -153,15 +153,21 @@
                 "
               >
                 <option value="" disabled selected>House city location</option>
+                 <option value="Brussels" >Brussels</option>
+                  <option value="Ghent" >Ghent</option>
+                   <option value="Bruges" >Bruges</option>
+                    <option value="Leuven" >Leuven</option>
+                     <option value="Antwerp" >Antwerp</option>
+                      <option value="Kortrijk" >Kortrijk</option>
               </select>
             </div>
             <div class="flex flex-col items-start space-y-2">
               <label for="Region" class="lg:text-lg text-sm text-black font-medium"
-                >Region</label
+                >neighbourhood/area</label
               >
               <input
                 id="Region"
-                placeholder="House region"
+                placeholder="House neighbourhood/area"
                 type="text"
                 class="
                   placeholder-[#7A7A7A]

@@ -237,7 +237,7 @@
               space-y-2
               text-[#414141] text-sm
               lg:text-lg
-              font-normal pl-9 lg:pl-0
+              font-normal pl-9 lg:pl-6
               p-4
             "
           >
