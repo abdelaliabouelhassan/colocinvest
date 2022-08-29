@@ -1,17 +1,30 @@
 <template>
-  <section :style="{ backgroundImage: `url(${bgImage})` }" class="w-full" id="WhatImages">
+  <section
+    :style="{ backgroundImage: `url(${bgImage})` }"
+    class="w-full"
+    id="WhatImages"
+  >
     <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 pb-32">
-          <div class=" flex-col items-center space-y-2 flex  lg:hidden">
-            <h1 class="text-primary-100 font-bold font-Vollkorn text-[28px]">
-              What are we looking for?
-            </h1>
-            <span class="text-base text-[#414141] font-medium"
-              >The most interesting projects generally have…</span
-            >
-          </div>
-      <div class="w-full flex lg:flex-row flex-col items-center lg:items-start lg:justify-between">
+      <div class="flex-col items-center space-y-2 flex lg:hidden">
+        <h1 class="text-primary-100 font-bold font-Vollkorn text-[28px]">
+          What are we looking for?
+        </h1>
+        <span class="text-base text-[#414141] font-medium"
+          >The most interesting projects generally have…</span
+        >
+      </div>
+      <div
+        class="
+          w-full
+          flex
+          lg:flex-row
+          flex-col
+          items-center
+          lg:items-start lg:justify-between
+        "
+      >
         <div class="flex flex-col items-start space-y-4">
-          <div class=" flex-col items-start space-y-2 hidden lg:flex">
+          <div class="flex-col items-start space-y-2 hidden lg:flex">
             <h1 class="text-primary-100 font-bold font-Vollkorn text-5xl">
               What are we looking for?
             </h1>
@@ -37,7 +50,7 @@
                   'bg-[#FECE1F] ': selected == 1,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 1,
                 }"
-                @click="handelSelect(1,'One doorbell')"
+                @click="handelSelect(1, 'One doorbell')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -49,6 +62,11 @@
                   One doorbell is a sign that the house is still owned by just
                   one person and not divided in to several units.
                 </p>
+                <Houses
+                  :selected="selected"
+                  :selectedBadgeTitle="selectedBadgeTitle"
+                  class="lg:hidden"
+                />
               </div>
             </div>
             <div class="flex flex-col items-start space-y-4">
@@ -67,7 +85,7 @@
                   'bg-[#FECE1F] ': selected == 2,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 2,
                 }"
-                 @click="handelSelect(2,'Wide facade')"
+                @click="handelSelect(2, 'Wide facade')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -79,6 +97,11 @@
                   A wide facade is a good indication that we can fit enough
                   rooms in the building.
                 </p>
+                <Houses
+                  :selected="selected"
+                  :selectedBadgeTitle="selectedBadgeTitle"
+                  class="lg:hidden"
+                />
               </div>
             </div>
             <div class="flex flex-col items-start space-y-4">
@@ -97,7 +120,7 @@
                   'bg-[#FECE1F] ': selected == 3,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 3,
                 }"
-                 @click="handelSelect(3,'Great location')"
+                @click="handelSelect(3, 'Great location')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -109,6 +132,11 @@
                   Our inhabitants love to be close to the city center of major
                   cities.
                 </p>
+                <Houses
+                  :selected="selected"
+                  :selectedBadgeTitle="selectedBadgeTitle"
+                  class="lg:hidden"
+                />
               </div>
             </div>
             <div class="flex flex-col items-start space-y-4">
@@ -127,7 +155,7 @@
                   'bg-[#FECE1F] ': selected == 4,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 4,
                 }"
-                 @click="handelSelect(4,'Three stories high')"
+                @click="handelSelect(4, 'Three stories high')"
               >
                 <IconCheck />
                 <span class="lg:text-lg text-sm text-[#414141] font-normal"
@@ -138,6 +166,11 @@
                 <p class="text-sm text-[#414141] font-normal">
                   The more stories, the more rooms
                 </p>
+                <Houses
+                  :selected="selected"
+                  :selectedBadgeTitle="selectedBadgeTitle"
+                  class="lg:hidden"
+                />
               </div>
             </div>
             <div class="flex flex-col items-start space-y-4">
@@ -156,10 +189,10 @@
                   'bg-[#FECE1F] ': selected == 5,
                   'hover:bg-[#FFFAE9] hover:ring-1': selected != 5,
                 }"
-                 @click="handelSelect(5,'After')"
+                @click="handelSelect(5, 'After')"
               >
                 <IconCheck />
-                <span class="lg:text-lg text-sm text-[#414141] font-normal"
+                <span class="lg:text-lg text-sm text-[#414141] font-normal whitespace-nowrap"
                   >To be renovated ( NO new constructions )</span
                 >
               </div>
@@ -169,6 +202,11 @@
                   buildings in to a cohousing so we might aswel buy a building
                   that needs renovation anyways.
                 </p>
+                <Houses
+                  :selected="selected"
+                  :selectedBadgeTitle="selectedBadgeTitle"
+                  class="lg:hidden"
+                />
               </div>
             </div>
             <div class="flex flex-col items-start space-y-4">
@@ -183,7 +221,7 @@
                   cursor-pointer
                   bg-[#FFFAE9]
                 "
-                 @click="handelSelect(6,'300 square feet')"
+                @click="handelSelect(6, '300 square feet')"
               >
                 <span class="lg:text-lg text-base text-primary-100 font-medium"
                   >More detailed characteristics</span
@@ -226,12 +264,19 @@
                       'bg-[#FECE1F] ': selected == 6,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 6,
                     }"
-                    @click="handelSelect(6,'300 square feet')"
+                    @click="handelSelect(6, '300 square feet')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
                       >300 square feet</span
                     >
+                  </div>
+                  <div class="max-w-[283px] w-full pl-10" v-if="selected == 6">
+                    <Houses
+                      :selected="selected"
+                      :selectedBadgeTitle="selectedBadgeTitle"
+                      class="lg:hidden"
+                    />
                   </div>
                 </div>
                 <div class="flex flex-col items-start space-y-4">
@@ -250,12 +295,19 @@
                       'bg-[#FECE1F] ': selected == 7,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 7,
                     }"
-                    @click="handelSelect(7,'At least 5-6 rooms')"
+                    @click="handelSelect(7, 'At least 5-6 rooms')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
                       >At least 5-6 rooms</span
                     >
+                  </div>
+                  <div class="max-w-[283px] w-full pl-10" v-if="selected == 7">
+                    <Houses
+                      :selected="selected"
+                      :selectedBadgeTitle="selectedBadgeTitle"
+                      class="lg:hidden"
+                    />
                   </div>
                 </div>
                 <div class="flex flex-col items-start space-y-4">
@@ -274,13 +326,19 @@
                       'bg-[#FECE1F] ': selected == 8,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 8,
                     }"
-                    @click="handelSelect(8,'15 - 20 square meters / room')"
-                    
+                    @click="handelSelect(8, '15 - 20 square meters / room')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
                       >15 - 20 square meters / room</span
                     >
+                  </div>
+                  <div class="max-w-[283px] w-full pl-10" v-if="selected == 8">
+                    <Houses
+                      :selected="selected"
+                      :selectedBadgeTitle="selectedBadgeTitle"
+                      class="lg:hidden"
+                    />
                   </div>
                 </div>
                 <div class="flex flex-col items-start space-y-4">
@@ -299,115 +357,30 @@
                       'bg-[#FECE1F] ': selected == 9,
                       'hover:bg-[#FFFAE9] hover:ring-1': selected != 9,
                     }"
-                    @click="handelSelect(9,'Garden and/or a terrace')"
+                    @click="handelSelect(9, 'Garden and/or a terrace')"
                   >
                     <IconCheck />
                     <span class="lg:text-lg text-sm text-[#414141] font-normal"
                       >Garden and/or a terrace</span
                     >
                   </div>
+                  <div class="max-w-[283px] w-full pl-10" v-if="selected == 9">
+                    <Houses
+                      :selected="selected"
+                      :selectedBadgeTitle="selectedBadgeTitle"
+                      class="lg:hidden"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex items-center order-first lg:order-last py-20 lg:py-0 " :class="{'-space-x-11':selected == 5}">
-          <div class="relative -z-20" v-if="selected == 5">
-            <div
-              class="
-                lg:w-[64px] w-[34px]
-                lg:h-[64px] h-[34px]
-                rounded-full
-                bg-[#FECE1F]
-                absolute
-                lg:-left-10 -left-4
-                lg:-top-7 -top-3 z-10
-              "
-            ></div>
-            <div
-              class="
-                lg:w-[250px] w-[150px]
-                lg:h-[350px] h-[218px]
-                rounded-2xl
-                overflow-hidden
-                bg-gray-600
-                relative
-              "
-            >
-              <img src="~/assets/img/before.png" class=" w-full h-full" alt="Before">
-              <div
-                class="
-                  bg-white
-                  text-primary-100
-                  font-medium
-                  lg:text-lg text-sm
-                  py-2
-                  px-4
-                  rounded-lg
-                  absolute
-                  left-4
-                  bottom-3
-                "
-              >
-               Before
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div
-              class="
-                lg:w-[120px] w-[64px]
-                lg:h-[120px] h-[64px]
-                rounded-full
-                bg-[#AFC1D4]
-                absolute
-                lg:-right-10 -right-5
-                lg:-top-10 -top-5
-                -z-10
-              "
-            ></div>
-            <div
-              class="
-                lg:w-[120px] w-[64px]
-                lg:h-[120px] h-[64px]
-                rounded-full
-                bg-[#FECE1F]
-                absolute
-                lg:-left-10 -left-5
-                lg:-bottom-10 -bottom-5
-                -z-10
-              "
-            ></div>
-            <div
-              class="
-                lg:w-[350px]  w-[251px]
-                lg:h-[450px]  h-[318px]
-                rounded-2xl
-                overflow-hidden
-                bg-gray-400
-                relative
-              "
-            >
-              <img :src="require('~/assets/img/'+selected+'.png')" class=" w-full h-full" :alt="selectedBadgeTitle">
-              <div
-                class="
-                  bg-white
-                  text-primary-100
-                  font-medium
-                  lg:text-lg text-sm
-                  py-2
-                  px-4
-                  rounded-lg
-                  absolute
-                  left-4
-                  bottom-3
-                "
-              >
-                {{ selectedBadgeTitle }}
-              </div>
-            </div>
-          </div>
-        </div>
+        <Houses
+          :selected="selected"
+          :selectedBadgeTitle="selectedBadgeTitle"
+          class="hidden lg:flex"
+        />
       </div>
     </div>
   </section>
@@ -416,6 +389,7 @@
 <script>
 import bgImage from "@/assets/img/secondsection.png";
 import IconCheck from "@/components/Icons/IconCheck.vue";
+import Houses from "@/components/includes/Houses.vue";
 export default {
   data() {
     return {
@@ -424,21 +398,24 @@ export default {
       selectedBadgeTitle: "One doorbell",
     };
   },
-  methods:{
-    goUp(){
+  methods: {
+    goUp() {
       window.scrollTo({
         top: document.getElementById("WhatImages").offsetTop,
         behavior: "smooth",
       });
     },
-    handelSelect(index,text){
+    handelSelect(index, text) {
       this.selected = index;
       this.selectedBadgeTitle = text;
-      this.goUp();
-    }
+      if (window.innerWidth > 1024) {
+        this.goUp();
+      }
+    },
   },
   components: {
     IconCheck,
+    Houses,
   },
 };
 </script>
