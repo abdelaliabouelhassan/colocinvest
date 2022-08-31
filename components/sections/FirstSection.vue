@@ -2,7 +2,7 @@
   <section
     class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden main-bg"
   >
-    <div class="w-full max-w-8xl m-auto px-4 pt-10 lg:pt-28 lg:pb-44 pb-10">
+    <div class="w-full 2xl:max-w-8xl m-auto px-4 pt-10 lg:pt-28 lg:pb-44 pb-10">
       <div class="w-full grid lg:grid-cols-2 grid-cols-1">
         <div
           class="
@@ -271,11 +271,11 @@
         </div>
         <div class="w-full h-full relative">
           <div
-            class="w-full lg:absolute lg:-top-[200px] lg:-right-8 flex"
+            class="w-full h-full lg:absolute lg:-top-[200px] lg:-right-8 flex"
             @mouseover="show = false"
             @mouseleave="show = true"
           >
-            <DesktopHero :show="show" class="lg:block hidden xl:absolute" />
+            <DesktopHero :show="show" class="lg:block hidden 2xl:absolute" />
             <MobileHero class="lg:hidden m-auto" />
           </div>
         </div>

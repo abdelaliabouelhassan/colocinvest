@@ -30,7 +30,7 @@
                 placeholder="First name"
                 type="text"
                 class="
-                  placeholder-[#7A7A7A]
+                  placeholder-[#7A7A7A] h-11
                   text-base
                   font-normal
                   bg-[#F7F7F7]
@@ -52,7 +52,7 @@
                 type="text"
                 class="
                   placeholder-[#7A7A7A]
-                  lg:text-base text-sm
+                  lg:text-base text-sm h-11
                   font-normal
                   bg-[#F7F7F7]
                   px-4
@@ -75,7 +75,7 @@
                 type="email"
                 class="
                   placeholder-[#7A7A7A]
-                   lg:text-base text-sm
+                   lg:text-base text-sm h-11
                   font-normal
                   bg-[#F7F7F7]
                   px-4
@@ -96,7 +96,7 @@
                 type="tel"
                 class="
                   placeholder-[#7A7A7A]
-                   lg:text-base text-sm
+                   lg:text-base text-sm h-11
                   font-normal
                   bg-[#F7F7F7]
                   px-4
@@ -147,7 +147,7 @@
                   bg-[#F7F7F7]
                   px-4
                   py-3
-                  rounded-md
+                  rounded-md h-11
                   w-full
                   outline-none
                 "
@@ -171,7 +171,7 @@
                 type="text"
                 class="
                   placeholder-[#7A7A7A]
-                   lg:text-base text-sm
+                   lg:text-base text-sm h-11
                   font-normal
                   bg-[#F7F7F7]
                   px-4
