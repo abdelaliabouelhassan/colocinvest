@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full">
+  <div class="relative w-full overflow-hidden">
     <FirstSection />
     <SecondSection />
     <ThirdSection />
