@@ -5,7 +5,7 @@
     <div
       class="
         w-full
-        max-w-[1520px]
+        max-w-[1641px] 
         m-auto
         2xl:pl-20 2xl:px-0
         px-4
@@ -31,7 +31,7 @@
             border-[3px] border-primary-100
             absolute
             bottom-[63px]
-            max-w-[1188px]
+            max-w-[1262px]
             left-[100px]
             z-10
           "
