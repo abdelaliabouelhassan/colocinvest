@@ -5,15 +5,15 @@
     <div
       class="
         w-full
-        max-w-[1641px] 
         m-auto
-        2xl:pl-20 2xl:px-0
+         2xl:px-0
         px-4
         py-20
         space-y-10
         hidden
         2xl:block
       "
+      :class="{'max-w-[1641px] 2xl:pl-20':seletedLang == 'en' || seletedLang == 'nl', 'max-w-[2849px] 2xl:pl-10':seletedLang == 'fr'}"
     >
       <div class="flex flex-col items-start space-y-2">
         <h1 class="text-primary-100 font-bold text-5xl font-Vollkorn">
@@ -23,7 +23,6 @@
           >In just 3 simple STEPS</span
         >
       </div>
-
       <div class="w-full flex items-end relative">
         <div
           class="
@@ -31,10 +30,10 @@
             border-[3px] border-primary-100
             absolute
             bottom-[63px]
-            max-w-[1262px]
             left-[100px]
             z-10
           "
+          :class="{'max-w-[1262px]':seletedLang == 'nl','max-w-[1227px]':seletedLang == 'en','max-w-[1463px]':seletedLang == 'fr'}"
         ></div>
         <div class="flex flex-col items-center space-y-4 z-40">
           <span class="font-extrabold text-[50px]">
@@ -49,12 +48,12 @@
             "
             
           ></div>
-          <h3 class="text-[25px] text-primary-100 font-bold">
-            Spot & register
+          <h3 class="text-[25px] text-primary-100 font-bold whitespace-nowrap">
+            {{ lang[0][seletedLang].title}}
           </h3>
         </div>
         <div class="relative">
-          <span class="invisible"> We prescreen your registered property</span>
+          <span class="invisible">    {{ lang[0][seletedLang].title2}}</span>
           <div
             class="
               whitespace-nowrap
@@ -70,7 +69,7 @@
             "
            
           >
-            We prescreen your registered property
+           {{ lang[0][seletedLang].title2}}
           </div>
         </div>
         <div class="flex flex-col items-center space-y-4 z-40">
@@ -86,12 +85,12 @@
             "
            
           ></div>
-          <h3 class="text-[25px] text-primary-100 font-bold">
-            Let’s have a coffee
+          <h3 class="text-[25px] text-primary-100 font-bold whitespace-nowrap">
+            {{ lang[0][seletedLang].title3}}
           </h3>
         </div>
         <div class="relative">
-          <span class="invisible">Complete registration & dashboard</span>
+          <span class="invisible"> {{ lang[0][seletedLang].title4}}</span>
           <div
             class="
               whitespace-nowrap
@@ -107,7 +106,7 @@
             "
           
           >
-            Complete registration & dashboard
+            {{ lang[0][seletedLang].title4}}
           </div>
         </div>
         <div class="flex flex-col items-center space-y-4 z-40">
@@ -123,8 +122,8 @@
             "
            
           ></div>
-          <h3 class="text-[25px] text-primary-100 font-bold">
-            We seal the deal
+          <h3 class="text-[25px] text-primary-100 font-bold whitespace-nowrap">
+            {{ lang[0][seletedLang].title5}}
           </h3>
         </div>
         <div class="flex flex-col items-center space-y-4 z-40 lg:pl-20">
@@ -179,8 +178,8 @@
             ></div>
           </div>
           <div class="relative">
-            <h3 class="text-[25px] text-primary-100 font-bold">
-              Enjoy spending your
+            <h3 class="text-[25px] text-primary-100 font-bold whitespace-nowrap">
+              {{ lang[0][seletedLang].title6}}
             </h3>
             <h5
               class="
@@ -567,6 +566,40 @@
 
 <script>
 export default {
+  //don't add this is for dev testing
+  data(){
+    return {
+      lang:[
+        {
+          en:{
+            title:"Spot & register",
+            title2:"We prescreen your registered property",
+            title3:"Let’s have a coffee",
+            title4:"Complete registration & dashboard",
+            title5:"We seal the deal",
+            title6:"Enjoy spending your",
+          },
+          fr:{
+            title:"Repérez et enregistrez",
+            title2:"Nous présélectionnons votre maison",
+            title3:"C'est l'heure du café",
+            title4:"Finalisation enregistrement et création du dashboard",
+            title5:"Nous concluons l'affaire",
+            title6:"Profitez de vos",
+          },
+          nl:{
+            title:"Spot & registreer",
+            title2:"Wij prescreenen jouw huis",
+            title3:"Tijd voor een koffie!",
+            title4:"Voltooiing registratie en aanmaak account dashboard",
+            title5:"Wij sluiten de deal",
+            title6:"Geniet van je",
+          },
+        }
+      ],
+      seletedLang:'nl',
+    }
+  },
   methods: {
     GetStarted() {
       //scroll to ContactUs id
@@ -576,5 +609,7 @@ export default {
       });
     },
   },
+  
+  
 };
 </script>
