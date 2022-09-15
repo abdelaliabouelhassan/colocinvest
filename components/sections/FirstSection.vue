@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden main-bg"
-  >
+  <section class="w-full pt-10 lg:pt-[92px] lg:overflow-hidden main-bg">
     <div class="w-full 2xl:max-w-8xl m-auto px-4 pt-10 lg:pt-28 lg:pb-44 pb-10">
       <div class="w-full grid lg:grid-cols-2 grid-cols-1">
         <div
@@ -32,6 +30,7 @@
             </p>
           </div>
           <div
+            v-if="seletedLang != 'fr'"
             class="
               w-full
               rounded-full
@@ -55,7 +54,7 @@
                     whitespace-nowrap
                   "
                 >
-                  I. Spot a house
+                  {{ lang[0][seletedLang].title }}
                 </h1>
                 <IconArowRight />
               </div>
@@ -71,7 +70,7 @@
                     whitespace-nowrap
                   "
                 >
-                  2. We make the deal
+                 {{ lang[0][seletedLang].title2 }}
                 </h1>
                 <IconArowRight />
               </div>
@@ -87,7 +86,7 @@
                     whitespace-nowrap
                   "
                 >
-                  3. You get rewarded
+                  {{ lang[0][seletedLang].title3 }}
                 </h1>
               </div>
             </div>
@@ -98,11 +97,12 @@
               flex flex-col
               items-center
               space-y-4
-              max-w-[250px]
+              max-w-[300px]
               m-auto
               md:m-0
-              xl:hidden
+             
             "
+            :class="{'xl:hidden':seletedLang != 'fr'}"
           >
             <div
               class="
@@ -125,7 +125,7 @@
                     whitespace-nowrap
                   "
                 >
-                  I. Spot a house
+                 {{ lang[0][seletedLang].title }}
                 </h1>
               </div>
             </div>
@@ -175,7 +175,7 @@
                     whitespace-nowrap
                   "
                 >
-                  2. We make the deal
+                 {{ lang[0][seletedLang].title2 }}
                 </h1>
               </div>
             </div>
@@ -225,7 +225,7 @@
                     whitespace-nowrap
                   "
                 >
-                  3. You get rewarded
+                 {{ lang[0][seletedLang].title3 }}
                 </h1>
               </div>
             </div>
@@ -237,7 +237,9 @@
               space-y-2
               text-[#414141] text-sm
               lg:text-lg
-              font-normal pl-9 lg:pl-6
+              font-normal
+              pl-9
+              lg:pl-6
               p-4
             "
           >
@@ -249,7 +251,7 @@
           </div>
 
           <button
-           @click="GetStarted"
+            @click="GetStarted"
             class="
               lg:text-lg
               text-sm
@@ -304,6 +306,29 @@ export default {
   data() {
     return {
       show: true,
+      //don't add this is for dev testing
+      seletedLang: "nl",
+      lang: [
+        {
+          en: {
+            title: "I. Spot a house",
+            title2: "2. We make the deal",
+            title3: "3. You get rewarded",
+          },
+          fr: {
+            title: "I. Trouvez une maison",
+            title2: "2. Nous concluons l'affaire",
+            title3: "3. Vous recevez votre récompense",
+          },
+           nl: {
+            title: "I. Spot een huis",
+            title2: "2. Wij sluiten de deal",
+            title3: "3. Jij wordt beloond",
+          },
+        },
+       
+
+      ],
     };
   },
   methods: {
